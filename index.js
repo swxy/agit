@@ -2,15 +2,15 @@
  * Created by swxy on 2017/5/11.
  */
 
-const program = require('commander');
-const exec = require('child_process').exec;
-const fs = require('fs');
+var program = require('commander');
+var exec = require('child_process').exec;
+var fs = require('fs');
 
-const package = require('./package.json');
-const desc = require('./description.json');
+var config = require('./package.json');
+var desc = require('./description.json');
 
 program
-    .version(package.version)
+    .version(config.version)
     .usage('[options] <file ...>')
     .option('-m, --comment [value]', 'description for branch/cmd');
 
