@@ -1,4 +1,4 @@
-# ngit
+# agit
 add git checkout extra message
 
 # api
