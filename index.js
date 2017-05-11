@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 /**
  * Created by swxy on 2017/5/11.
  */
@@ -5,9 +6,12 @@
 var program = require('commander');
 var exec = require('child_process').exec;
 var fs = require('fs');
+var path = require('path');
 
 var config = require('./package.json');
 var desc = require('./description.json');
+// 保存使用
+var descPath = path.resolve(__dirname, './description.json');
 
 program
     .version(config.version)
@@ -49,7 +53,7 @@ program
 program.parse(process.argv);
 
 function saveToFile() {
-    fs.writeFile('./description.json', JSON.stringify(desc, null, 4), function (err) {
+    fs.writeFile(descPath, JSON.stringify(desc, null, 4), function (err) {
         if (err) {
             console.error(err);
             return false;

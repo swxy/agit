@@ -1,5 +1,5 @@
 # agit
-add git checkout extra message
+解决git checkout分支时不支持comment的问题。
 
 # api
 1. checkout: 切换分支
