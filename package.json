@@ -11,15 +11,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/swxy/ngit.git"
+    "url": "git+https://github.com/swxy/agit.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/swxy/ngit/issues"
+    "url": "https://github.com/swxy/agit/issues"
   },
-  "homepage": "https://github.com/swxy/ngit#readme",
+  "homepage": "https://github.com/swxy/agit#readme",
   "dependencies": {
     "commander": "^2.9.0"
   }
