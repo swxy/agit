@@ -1,6 +1,11 @@
 # agit
 解决git checkout分支时不支持comment的问题。
 
+安装：
+```
+npm install agit -g
+```
+
 # api
 1. checkout: 切换分支
   ```

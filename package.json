@@ -1,6 +1,6 @@
 {
   "name": "agit",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "add git checkout extra message",
   "main": "index.js",
   "bin": {
