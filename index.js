@@ -9,9 +9,9 @@ var fs = require('fs');
 var path = require('path');
 
 var config = require('./package.json');
-var desc = require('./description.json');
+var desc = require('./data/description.json');
 // 保存使用
-var descPath = path.resolve(__dirname, './description.json');
+var descPath = path.resolve(__dirname, './data/description.json');
 
 program
     .version(config.version)
@@ -48,6 +48,19 @@ program
     .description('run the ls command to show desc')
     .action(function() {
         list();
+    });
+
+program
+    .command('config [configs...]')
+    .description('run the config command to set default git config, if not set parameter then apply the setting')
+    .action(function (configs) {
+       var conf = require('./lib/config');
+       if (configs && configs.length) {
+           conf.set(configs);
+       }
+       else {
+           conf.apply();
+       }
     });
 
 program.parse(process.argv);
