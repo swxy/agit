@@ -62,6 +62,12 @@ program
            conf.apply();
        }
     });
+program
+    .command('clone [options...]')
+    .description('clone remote git branch')
+    .action(function (options) {
+        require('./lib/clone').clone(options);
+    });
 
 program.parse(process.argv);
 
